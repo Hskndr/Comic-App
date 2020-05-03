@@ -1,0 +1,14 @@
+<div class="card">
+  <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+  <div class="card-body">
+    <h5 class="card-title">{{heroe.nombre}}</h5>
+    <p class="card-text">{{heroe.bio}}</p>
+    <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+    <button (click)="verHeroe()" type="button" class="btn btn-block btn-outline-primary ">
+      Ver más
+    </button>
+    <!-- Al envolver la ruta con [] admite que es un arreglo y recibe varios parametros.
+     al Inicializar la ruta con / admite que es una subruta de heroes-->
+    <a [routerLink]="['/heroe',i]" class="btn btn-block btn-outline-success ">Ver Más Link</a>
+  </div>
+</div>

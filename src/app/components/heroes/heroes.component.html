@@ -1,0 +1,20 @@
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr>
+<div class="card-columns">
+  <!--
+  caso: @Input()
+  [heroe]: variable creada en el componente hijo, que recibira el valor
+  ="heroe": Variable local del ngFor hace referencia al que enviara en componente padre
+
+   Caso: @Output()
+  (heroeSeleccionado): escuchar el evento seleccionado
+  verHeroe(): Es la funcion que va a ejecutar el evento
+  ($event): recibe envento como parametro.
+   -->
+  <app-heroe-tarjetas (heroeSeleccionado)="verHeroe($event)"
+                      [heroe]="heroe"
+                      [index]="i"
+                      *ngFor="let heroe of heroes; let i =index"></app-heroe-tarjetas>
+
+</div>
+
